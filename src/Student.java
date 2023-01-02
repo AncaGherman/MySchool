@@ -3,23 +3,26 @@ import java.util.Arrays;
 public class Student extends Person {
     private int year;
     boolean buget = true;
-    private Course[] listOfC;
+    private Course[] listOfCMan;
+    private Course[] listOfCOpt;
 
     public Student(String name, String id) {
         super(name, id);
     }
 
-    public Student(String name, String id, int year, boolean buget, Course[] listOfC) {
+    public Student(String name, String id, int year, boolean buget, Course[] listOfCMan, Course[] listOfCOpt) {
         super(name, id);
         this.year = year;
         this.buget = buget;
-        this.listOfC = listOfC;
+        this.listOfCMan = listOfCMan;
+        this.listOfCOpt = listOfCOpt;
     }
 
     public Student(String name, String id, int year, boolean buget) {
         super(name, id);
         this.year = year;
         this.buget = buget;
+
     }
 
     public int getYear() {
@@ -38,12 +41,25 @@ public class Student extends Person {
         this.buget = buget;
     }
 
-    public Course[] getListOfC() {
-        return listOfC;
+    public Course[] getListOfCMan() {
+        return listOfCMan;
     }
 
-    public void setListOfC(Course[] listOfC) {
-        this.listOfC = listOfC;
+    public void setListOfCMan() {
+        // urmeaza sa fac
+        this.listOfCMan = listOfCMan;
+    }
+
+    public Course[] getListOfCOpt() {
+        return listOfCOpt;
+    }
+
+    public void setListOfCOpt(Course[] listOfCOpt) {
+        this.listOfCOpt = listOfCOpt;
+    }
+
+    public void registerStudent(Course [] listOfCOpt) {
+        // urmeaza sa fac
     }
 
     @Override
@@ -53,7 +69,8 @@ public class Student extends Person {
                 super.getId() + " "+
                 "year=" + year + " " +
                 (buget? "buget":"taxa") + " " +
-                "listOfC=" + Arrays.toString(listOfC) +
+                "listOfCMan=" + Arrays.toString(listOfCMan) +
+                "listOfCOpt=" + Arrays.toString(listOfCOpt) +
                 '}';
     }
 }

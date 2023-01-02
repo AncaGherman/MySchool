@@ -7,11 +7,12 @@ public class School {
     private Person[] personInSchool = new Person[MAXPERSONS];
 
     private void addCourses() {
-        courseInSchool[0] = new Course ("Mathematics","Objectives for Mathematics", false);
-        courseInSchool[1] = new Course ("Informatics","Objectives for Informatics", true);
-        courseInSchool[2] = new Course ("Chemistry","Objectives for Chemistry", false);
-        courseInSchool[3] = new Course ("Biology","Objectives for Biology", false);
-        courseInSchool[4] = new Course ("Geography","Objectives for Geography", false);
+        courseInSchool[0] = new Course ("Mathematics","Objectives for Mathematics", false, 1);
+        courseInSchool[1] = new Course ("Informatics","Objectives for Informatics", true, 1);
+        courseInSchool[2] = new Course ("Chemistry","Objectives for Chemistry", false, 2);
+        courseInSchool[3] = new Course ("Biology","Objectives for Biology", false, 2);
+        courseInSchool[4] = new Course ("Geography","Objectives for Geography", false,3);
+
     }
 
     private void addPersons() {
@@ -47,5 +48,6 @@ public class School {
         sc.addPersons();
         sc.printCourses();
         sc.printPersons();
+
     }
 }

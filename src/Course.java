@@ -2,11 +2,21 @@ public class Course {
     private String nameC;
     private String summary;
     private boolean optional = true;
+    private int year ;
 
-    public Course(String nameC, String summary, boolean optional) {
+    public Course(String nameC, String summary, boolean optional, int year) {
         this.nameC = nameC;
         this.summary = summary;
         this.optional = optional;
+        this.year = year;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public String getNameC() {
